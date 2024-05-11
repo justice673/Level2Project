@@ -1,0 +1,69 @@
+
+@font-face {
+    font-family: 'moderat-bold';
+    src: url(/fonts/moderat-bold.7586444-webfont.woff);
+}
+
+@font-face {
+    font-family: 'moderat-light';
+    src: url(/fonts/moderat-light.802cb86-webfont.woff);
+}
+
+@font-face {
+    font-family: 'moderat-medium';
+    src: url(/fonts/moderat-medium.5124209-webfont.woff);
+}
+
+@font-face {
+    font-family: 'moderat';
+    src: url(/fonts/moderat-regular.21e2262-webfont.woff);
+}
+
+.footer ul {
+    list-style: none;
+    margin-left: 4em;
+    margin-top: 1em;
+}
+.main {
+    display: flex;
+    gap: 0 3.5em;
+    margin: 0 auto;
+    width: 100%;
+    background-color: skyblue;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    /* outline: 1px solid red; */
+}
+.footer ul li:hover {
+    color: rgba(128, 128, 128, 0.359);
+}
+.footer ul li {
+    transition: .25s;
+    cursor: pointer;
+    width: max-content;
+    margin-bottom: 1em;
+}
+.footer ul li {
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'moderat-light';
+}
+.footer ul h5 {
+    font-size: 17px;
+    font-family: 'moderat-light';
+    margin-bottom: 1em;
+}
+
+.conditions ul li {
+    transition: .25s;
+}
+.conditions ul li:hover {
+    color: rgba(128, 128, 128, 0.359);
+}
+.conditions ul {
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    gap: 0 2em;
+    font-family: 'moderat-light';
+}
