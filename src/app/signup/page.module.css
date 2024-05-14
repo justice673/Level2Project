@@ -1,3 +1,10 @@
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .formcontainer {
     background-color: white;
     width: 300px;
@@ -21,6 +28,34 @@
     font-size: 14px;
   }
   
+  .inputIcon {
+    position: relative;
+}
+
+.inputIcon input {
+  transition: border 0.3s ease;
+  }
+  
+.inputIcon input:hover {
+    border: 2px solid skyblue;
+  }
+  
+ #name, #email {
+    transition: border-color 0.3s ease;
+  }
+  
+  #name:hover, #email:hover {
+    border-color: skyblue;
+  }
+  
+.iconButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background: none;
+    border: none;
+}
+
   .submitbtn {
     background-color: skyblue;
     color: white;
@@ -37,6 +72,7 @@
     align-items: center;
     text-align: center;
     color: #aaa;
+    margin-top: 10px;
   }
   
   .separator::before,

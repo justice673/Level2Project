@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './page.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
+import Link from 'next/link';
 
 const Page = () => {
   return (
@@ -21,7 +22,7 @@ const Page = () => {
       </div>
       <button  style={{ backgroundColor: '#3b5998', color: 'white' }} className={styles.buttonstyle}>Facebook </button>
       <button  style={{ backgroundColor: 'white', color: 'grey', border: '1px solid #ddd' }} className={styles.buttonstyle}>Google</button>
-      <p>Need an account? <a href="/signup">Sign up</a></p>
+      <p>Need an account? <Link href={"/signup"}>Sign up</Link></p>
     </div>
     </div>
     <Footer/>

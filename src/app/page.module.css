@@ -1,0 +1,20 @@
+.products {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .cart {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .image {
+    cursor: pointer;
+  }
+  

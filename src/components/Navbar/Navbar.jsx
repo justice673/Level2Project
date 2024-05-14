@@ -22,47 +22,16 @@ const Navbar = () => {
       </div>
       <div className={styles.headerDropdown}>
         <ul>
-
-          <li className={styles.dropdown1}>ADOPT OR GET INVOLVED
-          <ul>
-            <li>About PETOPIACENTER</li>
-            <li>Adopting Pets</li>
-            <li>Animal Shelters & Rescues</li>
-            <li>PETOPIACENTER Foundation</li>
-          </ul>
-          </li>
-
-          <li className={styles.dropdown2}>DOGS & PUPPIES 
-          <ul>
-            <li>Dog Adoption</li>
-            <li>Dog Breeds</li>
-            <li>Feeding Your Dog</li>
-            <li>Dog Behaviour</li>
-            <li>Dog Health & Wellness</li>
-            <li>Dog Training</li>
-            <li>Other Dog Information</li>
-          </ul>
-          </li>
-          <li className={styles.dropdown3}>CATS & KITTENS
-          <ul>
-            <li>Cat Adoption</li>
-            <li>Cat Breeds</li>
-            <li>Feeding Your Cat</li>
-            <li>Cat behaviour</li>
-            <li>Cat Health & Wellness</li>
-            <li>Cat Training</li>
-            <li>Other Cat Informaion</li>
-          </ul>
-          </li>
+          <li className={styles.dropdown1}>ADOPT OR GET INVOLVED</li>
+          <li className={styles.dropdown2}>DOGS & PUPPIES </li>
+          <li className={styles.dropdown3}>CATS & KITTENS</li>
           <li className={styles.dropdown4}>OTHER TYPES OF PETS
           <ul>
             <li>Birds</li>
-            <li>Exotic Pets</li>
-            <li>Rabbits</li>8
+            <li>Rabbits</li>
             <li>Reptiles</li>
             <li>Guinea Pigs</li>
             <li>Horses</li>
-            <li>Small & Furry Pets</li>
           </ul>
           </li>
         </ul>

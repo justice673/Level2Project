@@ -19,13 +19,6 @@
     src: url(/fonts/moderat-regular.21e2262-webfont.woff);
 }
 
-/* .main{
-    background-color: #EFEEF1;
-    /* height: 700px; 
-    width: 100%;
-    position: relative;
-    outline: 1px solid red;
-} */
 .container{
     background-color: #fff;
     width: 100%;
@@ -33,9 +26,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 26px 0px;
-    /* position: absolute; */
-    /* top: 2.8em; */
-    /* outline: 1px solid red; */
 }
 .containerDropdown{
     margin-left: 5em;
@@ -86,72 +76,10 @@
     padding: 22px 0px;
     margin-left: -22em;
 }
-.dropdown1{
-    position: relative;
-}
-.dropdown1:hover>ul{
-    visibility: visible;
-    opacity: 1;
-}
-.dropdown1 ul{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: skyblue;
-    visibility: hidden;
-    opacity: 0;
-    transition: .1s;
-    margin: 10px;
-    width: 280px;
-    left: -5px;
-    border-radius: 12px;
-    row-gap: 1em;
-}
 
-.dropdown2{
-    position: relative;
+.headerDropdown ul li:hover {
+    color: rgba(128, 128, 128, 0.359);
 }
-.dropdown2:hover>ul{
-    visibility: visible;
-    opacity: 1;
-}
-.dropdown2 ul{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: skyblue;
-    visibility: hidden;
-    opacity: 0;
-    transition: .1s;
-    margin: 10px;
-    width: 200px;
-    left: -5px;
-    border-radius: 12px;
-    row-gap: 1em;
-}
-
-.dropdown3{
-    position: relative;
-}
-.dropdown3:hover>ul{
-    visibility: visible;
-    opacity: 1;
-}
-.dropdown3 ul{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: skyblue;
-    visibility: hidden;
-    opacity: 0;
-    transition: .1s;
-    margin: 10px;
-    width: 200px;
-    left: -5px;
-    border-radius: 12px;
-    row-gap: 1em;
-}
-
 .dropdown4{
     position: relative;
 }
@@ -172,11 +100,4 @@
     left: -5px;
     border-radius: 12px;
     row-gap: 1em;
-}
-.imageContainer{
- width: 500px;
- height: 500px;
- position: absolute;
- top: 18em ;
- margin-top: 50px;
 }
