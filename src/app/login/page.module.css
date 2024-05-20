@@ -5,12 +5,14 @@
     justify-content: center;
     gap: 20px;
     max-width: 300px;
-    margin:   auto;
+    margin: auto;
     padding: 60px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 24px;
+    position: relative; /* Add this line to position the close button absolutely within this container */
 }
+
 .inputstyle{
     width: 100%;
     padding: 15px 10px;
@@ -29,23 +31,23 @@
     align-items: center;
     text-align: center;
     color: #aaa;
-  }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-  .separator::before,
-  .separator::after {
+}
+
+.separator::before,
+.separator::after {
     content: '';
     flex: 1;
     border-bottom: 1px solid #aaa;
-  }
-  
-  .separator::before {
+}
+
+.separator::before {
     margin-right: .25em;
-  }
-  
-  .separator::after {
+}
+
+.separator::after {
     margin-left: .25em;
-  }
-  
+}
+
 .buttonstyle{
     width: 100%;
     padding: 15px;
@@ -58,4 +60,12 @@
 
 .buttonstyle:hover {
     border-color: skyblue;
-  }
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: large; 
+    border-radius: 20px;
+}

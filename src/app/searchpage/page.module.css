@@ -1,0 +1,78 @@
+.main{
+    position: relative;
+    height: 200px;
+}
+.main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.search{
+    margin: 2em 30%;
+    position: absolute;
+    top: 2em;
+}
+.search input{
+    border-radius: 8px;
+    border: none;
+    width: 500px;
+    height: 50px;
+    padding: 0 1.5em;
+}
+.text{
+    position: absolute;
+    bottom: 1em;
+    padding-left: 4em;
+    color: white;
+}
+.text span{
+    padding-left: 3em;
+}
+
+/* For desktop: */
+@media (min-width: 992px) {
+    
+  }
+  
+  /* For tablet: */
+  @media (min-width: 768px) and (max-width: 991px) { 
+    .search{
+        margin: 0.5em 15%;
+        position: absolute;
+        top: 1em;
+    } 
+    .text{
+        position: absolute;
+        bottom: 3em;
+        padding-left: 10em;
+        color: white;
+    }
+    .text span{
+        padding-left: 0;
+    }
+    .container {
+      column-count: 3;
+      column-gap: 2em;
+    }
+  }
+  
+  /* For mobile: */
+  @media (max-width: 767px) {
+.search{
+    margin: 0.5em;
+    position: absolute;
+    top: 1em;
+}
+.search input{
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    width: 400px;
+    height: 55px;
+    padding: 0 1em;
+}
+    .container {
+      column-count: 2;
+    }
+  }
+  

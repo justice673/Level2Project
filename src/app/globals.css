@@ -2,3 +2,259 @@
   padding: 0;
   margin: 0;
 }
+body{
+  overflow-x: hidden;
+}
+.toggle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.toggle span {
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background-color: skyblue;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 25px;
+  left: 15px;
+}
+
+.toggle.toggle:hover span:nth-child(1) {
+  width: 40px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+}
+
+.toggle span:nth-child(2) {
+  transform: translateY(15px);
+  width: 15px;
+  left: 15px;
+}
+
+.toggle.toggle:hover span:nth-child(2) {
+  width: 40px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.125s;
+}
+
+.toggle:hover span:nth-child(3) {
+  transform: translateX(60px);
+}
+
+.button {
+  position: relative;
+  width: 6em;
+  height: 4em;
+  border: none;
+  background: none;
+}
+
+.X {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+
+.Y {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container1 {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  transition: 100ms;
+}
+
+.checkmark {
+  position: absolute;
+  top: -0.8em;
+  right: 0;
+  height: 1.4em;
+  width: 1.4em;
+  transition: 100ms;
+  animation: dislike_effect 400ms ease;
+}
+
+.container1 input:checked + .checkmark svg path {
+  fill: #FF5353;
+  stroke-width: 0;
+}
+
+.container1 input:checked + .checkmark {
+  animation: like_effect 400ms ease;
+}
+
+.container1:hover {
+  transform: scale(1.1);
+}
+
+@keyframes like_effect {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dislike_effect {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.CartBtn {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+}
+
+.IconContainer {
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .5s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(17, 17, 17);
+  z-index: 1;
+  transition-duration: .5s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+  transform: translateX(58px);
+  border-radius: 40px;
+  transition-duration: .5s;
+}
+
+.CartBtn:hover .text {
+  transform: translate(10px,0px);
+  transition-duration: .5s;
+}
+
+.CartBtn:active {
+  transform: scale(0.95);
+  transition-duration: .5s;
+}
+
+
+.button-container {
+  display: flex;
+  background-color: rgba(245, 73, 144);
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+  fill: skyblue;
+  
+}

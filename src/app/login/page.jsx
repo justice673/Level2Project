@@ -10,6 +10,12 @@ const Page = () => {
     <Navbar/>
     <div>
     <div className={styles.logincontainer}>
+      <div className={styles.closeButton}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+          <line x1="0" y1="0" x2="20" y2="20" stroke="skyblue" stroke-width="6"/>
+          <line x1="20" y1="0" x2="0" y2="20" stroke="skyblue" stroke-width="6"/>
+        </svg>
+      </div>                
       <h2>Log In</h2>
       <form>
           <input type="email" name="email" placeholder='Email' required className={styles.inputstyle}/>
@@ -27,7 +33,6 @@ const Page = () => {
     </div>
     <Footer/>
     </>
-
   );
 };
 

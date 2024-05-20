@@ -32,12 +32,12 @@
     position: relative;
 }
 
-.inputIcon input {
-  transition: border 0.3s ease;
+.inputIcon input { 
+  transition: border-color 0.3s ease;
   }
   
 .inputIcon input:hover {
-    border: 2px solid skyblue;
+    border-color:   skyblue;
   }
   
  #name, #email {

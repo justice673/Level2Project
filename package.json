@@ -15,9 +15,11 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bcryptjs": "^2.4.3",
     "moment": "^2.30.1",
+    "mongodb": "^6.6.2",
     "mongoose": "^6.12.8",
     "next": "14.1.4",
     "next-auth": "^4.24.7",
+    "pexels": "^1.4.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.0"

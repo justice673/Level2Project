@@ -32,8 +32,12 @@
     background-color: red;
 
 }
+.like{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .likeIcon{
-    margin-left: 32em;
     font-size: 25px;
     cursor: pointer;
     color: skyblue;
@@ -41,30 +45,33 @@
 .likeIcon:hover{
     color: red;
 }
-.containerLinks{
+.cartIcon{
+    padding-left: 1em;
+}
+ .containerLinks{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 8em;
     padding-left: 2em;
-    border-left: 2px solid gray;
-}
+} 
 .link{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: grey;
+    padding-right: 1em;
     text-decoration: none;
-    margin-right: 10px;
     font-size: 20px;
     font-family: 'moderat-light';
     cursor: pointer;
 }
 .link:hover{
-    color: skyblue;
+    color: black;
 }
 .headerDropdown{
     background-color: skyblue;
-    /* position: absolute; */
-    /* top: 8em; */
-    width: 84.2em;
+    width: 100%;
     color: white;
 }
 .headerDropdown ul{
@@ -72,22 +79,21 @@
     list-style: none;
     justify-content: center;
     align-items: center;
-    gap: 5em;
+    gap: 1rem;
     padding: 22px 0px;
-    margin-left: -22em;
 }
 
 .headerDropdown ul li:hover {
     color: rgba(128, 128, 128, 0.359);
 }
-.dropdown4{
+.dropdown3{
     position: relative;
 }
-.dropdown4:hover>ul{
+.dropdown3:hover>ul{
     visibility: visible;
     opacity: 1;
 }
-.dropdown4 ul{
+.dropdown3 ul{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -101,3 +107,102 @@
     border-radius: 12px;
     row-gap: 1em;
 }
+
+.menu{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    display: none;
+}
+.menu h2{
+    margin: 1em;
+}
+.return{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* For desktop: */
+@media (min-width: 992px) {
+    
+  }
+  
+  /* For tablet: */
+  @media (min-width: 768px) and (max-width: 991px) {
+   
+  }
+  
+  /* For mobile: */
+  @media (max-width: 767px) {
+    
+.container{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 0px;
+}
+.likeIcon{
+    font-size: 25px;
+    cursor: pointer;
+    /* background-color: red; */
+    color: skyblue;
+}
+.likeIcon:hover{
+    color: red;
+}
+.link{
+font-size: 20px;
+color: white;
+}
+.menu{
+    background-color: rgb(64, 193, 244);
+}
+.headerDropdown{
+    background-color: skyblue;
+    margin-top: 5em;
+}
+.headerDropdown ul{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.headerDropdown ul li{
+    padding-left: 1em;
+}
+.headerDropdown ul li:hover {
+    color: black;
+    text-decoration: underline;
+}
+.dropdown3{
+    position: relative;
+}
+.dropdown3:hover>ul{
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown3 ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 40px;
+    background-color: rgb(74, 150, 181);
+    visibility: hidden;
+    transition: .1s;
+    border-radius: 12px;
+}
+.enter{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 2em;
+    left: 1em;
+}
+  }
