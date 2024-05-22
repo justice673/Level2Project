@@ -1,12 +1,65 @@
 .main{
-    position: relative;
-    height: 200px;
+  position: relative;
+  height: 200px;
+}
+.icons{
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  width: 100%;
+  /* background-color: red; */
+  height: 10rem;
+}
+.contain{
+  margin: auto;
+  /* background-color: #000; */
+  width:30%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+  padding: 1em;
 }
 .main img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icons img{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  /* margin-left: 2em; */
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.icons img:hover{
+  outline: 4px solid skyblue;
+}
+.seperate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  padding: 0 1em;
+  padding-top: 7rem;
+  column-gap: 1em;
+}
+.imageContainer{
+  width: 100%;
+  height: 100%;
+}
+.item {
+  break-inside: avoid;
+  margin-bottom: 1em;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 1em;
+}
 .search{
     margin: 2em 30%;
     position: absolute;
@@ -31,11 +84,24 @@
 
 /* For desktop: */
 @media (min-width: 992px) {
-    
+  .main{
+    max-width: 100%;
+    height: 'auto';
+    margin-bottom: 1em;
+  }
+  .main img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  } 
+  .container {
+    column-count: 4;
+  }
   }
   
   /* For tablet: */
   @media (min-width: 768px) and (max-width: 991px) { 
+   
     .search{
         margin: 0.5em 15%;
         position: absolute;

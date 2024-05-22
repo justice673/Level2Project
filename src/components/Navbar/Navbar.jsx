@@ -1,7 +1,9 @@
+
 import React from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Navbar = () => {
   const links = [
@@ -22,6 +24,7 @@ const Navbar = () => {
           PETOPIACENTER
         </h3>
         </Link>
+        <ThemeToggle/>
         {/* <div className={styles.containerDropdown}>ALL ABOUT PETS</div> */}
         <div className={styles.like}>
           <Link href={"/favorite"}>

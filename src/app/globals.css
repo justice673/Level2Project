@@ -4,6 +4,16 @@
 }
 body{
   overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.dark{
+  --background-color: #000;
+  --text-color: #fff;
+}
+.light{
+  --background-color: #fff;
+  --text-color: #000;
 }
 .toggle {
   position: relative;
@@ -256,5 +266,5 @@ body{
 .icon {
   font-size: 20px;
   fill: skyblue;
-  
+
 }

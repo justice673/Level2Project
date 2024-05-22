@@ -31,7 +31,9 @@ export default function Page() {
           <FaHeart />
         </div>
       </div>
-
+    <div className={styles.text}>
+            <h1>Cart</h1>
+            </div>
       <div className={styles.container1}>
         {cart && cart.map(item => (
           <div key={item._id} className={styles.cart}>

@@ -1,10 +1,48 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import styles from './page.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css";
+
 
 const Page = () => {
+  const navigation = useRouter()
+  const [email, setEmail] = useState(" ");
+    const [password, setPassword] = useState(" ");
+const notyf = new Notyf()
+
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      // console.log("hepesd");
+
+     
+      
+      try {
+        const res = await fetch("api/auth/authentication", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        });
+        console.log(res.status);
+        if (res.status === 200) { 
+          navigation.push("/")
+          notyf.success("Succesfully Logged in")
+        } else if (res.status === 400) {
+          return notyf.error("user does not exist")
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
   return (
     <>
     <Navbar/>
@@ -17,9 +55,9 @@ const Page = () => {
         </svg>
       </div>                
       <h2>Log In</h2>
-      <form>
-          <input type="email" name="email" placeholder='Email' required className={styles.inputstyle}/>
-          <input type="password" name="password" placeholder='Password' required className={styles.inputstyle}/>
+      <form onSubmit={handleSubmit}>
+          <input type="email" name="email" value={email} placeholder='Email' required className={styles.inputstyle} onChange={(e)=>setEmail(e.target.value)} />
+          <input type="password" name="password" value={password} placeholder='Password' required className={styles.inputstyle} onChange={(e)=>setPassword(e.target.value)}/>
         <button type="submit"  style={{ backgroundColor: 'skyblue', color: 'white' }} className={styles.buttonstyle}>LOG IN</button>
       </form>
       <a href="#">Forgot password?</a>

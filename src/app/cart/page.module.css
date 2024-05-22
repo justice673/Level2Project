@@ -6,7 +6,11 @@
     padding: 10px 20px;
     color: #fff;
   }
-  
+  .text h1{
+    padding-left: 5em;
+    padding-top: 1em;
+    color: skyblue;
+  }
   .container {
     display: flex;
     align-items: center;

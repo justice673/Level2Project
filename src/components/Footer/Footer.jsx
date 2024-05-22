@@ -7,11 +7,6 @@ const Footer = () => {
     <div className={styles.main}>
         <div className={styles.footer}>
             <ul>
-                <h5>ADOPT OR GET INVOLVED</h5>
-            </ul>
-        </div>
-        <div className={styles.footer}>
-            <ul>
                 <h5>DOGS & PUPPIES</h5>
             </ul>
         </div>
