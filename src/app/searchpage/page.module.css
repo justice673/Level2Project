@@ -71,6 +71,7 @@
     width: 500px;
     height: 50px;
     padding: 0 1.5em;
+    outline: none;
 }
 .text{
     position: absolute;

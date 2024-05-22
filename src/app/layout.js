@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/Footer";
 import Login from "@/app/login/page";
 import Context from "@/components/Context";
 import { ThemeProvider } from "../../context/ThemeContext";
+import { CartProvider } from "@/components/CartContext";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +22,9 @@ export default function RootLayout({ children }) {
         {/* <Navbar/> */}
         <ThemeProvider>
         <Context>
+          <CartProvider>
         {children}
+        </CartProvider>
         </Context>
         </ThemeProvider>
         {/* <Footer/> */}

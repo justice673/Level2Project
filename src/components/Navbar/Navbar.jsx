@@ -1,5 +1,6 @@
 
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
@@ -10,6 +11,7 @@ const Navbar = () => {
     { name: "Sign Up", href: "/signup" },
     { name: "Log In", href: "/login" },
   ];
+  const [menu , setMenu] = useState(false)
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -21,10 +23,13 @@ const Navbar = () => {
             fontFamily: "moderat-medium",
           }}
         >
+          <div className={styles.h1Image}>
+          <img src="/images/Capture.PNG" alt="" />
+          </div>
           PETOPIACENTER
         </h3>
         </Link>
-        <ThemeToggle/>
+        {/* <ThemeToggle/> */}
         {/* <div className={styles.containerDropdown}>ALL ABOUT PETS</div> */}
         <div className={styles.like}>
           <Link href={"/favorite"}>
@@ -47,7 +52,7 @@ const Navbar = () => {
             {/* {links.map((link,index) => (
             <Link href={link.href} className={styles.link} key={index}>{link.name}</Link>
           ))} */}
-            <div class="container">
+            <div class="container" onClick={()=>setMenu(true)}>
               <div class="toggle">
                 <span></span>
                 <span></span>
@@ -57,12 +62,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={styles.menu}>
+      <div className={`${styles.menu} ${menu && styles.menuShow}`}>
         <div className={styles.return}>
         <div className={styles.text}>
        <h2>Menu</h2>
        </div>
-       <button class="button">
+       <button class="button" onClick={()=>setMenu(false)}>
       <span class="X"></span>
       <span class="Y"></span>
       </button>

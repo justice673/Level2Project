@@ -11,7 +11,7 @@ import Image from 'next/image';
 const Page = () => {
 
   const [favorite, setFavorite] = useContext(petContext);
-  const [cart, setCart] = useContext(petContext);
+  const [cart, setCart] = useContext(CartContext);
 console.log(favorite);
   const[pets, setPets] = useState([]);
 
