@@ -39,7 +39,7 @@ console.log(favorite);
   useEffect(() => {
   const fetchPets= async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/posts");
+      const response = await fetch("/api/posts");
       const data = await response.json();
       setPets(data);
     } catch (error) {

@@ -23,29 +23,31 @@ export default function SignUp() {
     errorPassword: "",
   });
   const router = useRouter();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const notyf = new Notyf();
+
+  emailjs
+    .sendForm('service_gtcv669', 'template_21mnu1p', form.current, {
+      publicKey: 'ar4vfSfs4iZUIb_7t',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+};
+
   const handleSubmit = async (e) => {
       e.preventDefault();
       console.log(name, email, password);
       let valid = true;
       
-      const sendEmail = (e) => {
-          e.preventDefault();
-          const notyf = new Notyf();
-    
-        emailjs
-          .sendForm('service_gtcv669', 'template_21mnu1p', form.current, {
-            publicKey: 'ar4vfSfs4iZUIb_7t',
-          })
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-      };
-
+      sendEmail();n
     const validateEmail = (email) => {
         const re = /\S+@\S+\.\S+/;
         return re.test(email);
