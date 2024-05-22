@@ -22,15 +22,15 @@ export default function SignUp() {
     errorEmail: "",
     errorPassword: "",
   });
-  const notyf = new Notyf();
   const router = useRouter();
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log(name, email, password);
-    let valid = true;
-
-    const sendEmail = (e) => {
-        e.preventDefault();
+      e.preventDefault();
+      console.log(name, email, password);
+      let valid = true;
+      
+      const sendEmail = (e) => {
+          e.preventDefault();
+          const notyf = new Notyf();
     
         emailjs
           .sendForm('service_gtcv669', 'template_21mnu1p', form.current, {

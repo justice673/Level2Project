@@ -13,13 +13,13 @@ const Page = () => {
   const navigation = useRouter()
   const [email, setEmail] = useState(" ");
     const [password, setPassword] = useState(" ");
-const notyf = new Notyf()
-
+    
     const handleSubmit = async (e) => {
       e.preventDefault()
       // console.log("hepesd");
-
       
+      
+      const notyf = new Notyf()
       
       try {
         const res = await fetch("api/auth/authentication", {
