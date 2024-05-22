@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa6";
+import { FaHeart, FaMagnifyingGlass } from "react-icons/fa6";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Navbar = () => {
@@ -35,6 +35,11 @@ const Navbar = () => {
           <Link href={"/favorite"}>
           <div className={styles.likeIcon}>
             <FaHeart />
+          </div>
+          </Link>
+          <Link href={"/searchpage"}>
+          <div className={styles.likeIcon}>
+          <FaMagnifyingGlass/>
           </div>
           </Link>
           <Link href={"/cart"}>

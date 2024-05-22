@@ -44,6 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1em;
 }
 .likeIcon{
     font-size: 25px;
@@ -54,13 +55,13 @@
     color: red;
 }
 .cartIcon{
-    padding-left: 1em;
+    /* padding-left: 1em; */
 }
  .containerLinks{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 2em;
+    /* padding-left: 2em; */
 } 
 .link{
     /* background-color: red; */
